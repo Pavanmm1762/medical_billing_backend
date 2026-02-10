@@ -14,4 +14,4 @@ RUN ./mvnw clean package -DskipTests
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "target/medical-backend-0.0.1-SNAPSHOT.jar"]
+CMD ["sh", "-c", "java -Dserver.port=$PORT -jar target/medical-backend-0.0.1-SNAPSHOT.jar"]
